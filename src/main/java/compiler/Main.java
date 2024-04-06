@@ -6,11 +6,13 @@ import compiler.listener.*;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.Token;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.bytedeco.javacpp.BytePointer;
 
 import java.io.IOException;
+import java.util.List;
 
 import static org.bytedeco.llvm.global.LLVM.LLVMDisposeMessage;
 import static org.bytedeco.llvm.global.LLVM.LLVMPrintModuleToFile;
@@ -28,6 +30,7 @@ public class Main {
         lexer.removeErrorListeners();
         LexerErrorListener lexerErrorListener = new LexerErrorListener();
         lexer.addErrorListener(lexerErrorListener);
+        List<? extends Token> myTokens = lexer.getAllTokens(); // 触发词法错误检查
         if (lexerErrorListener.hasLexError()) {
             return; // 存在词法错误，退出程序
         }
