@@ -1,6 +1,4 @@
-package compiler.gen.parser;
 
-import compiler.gen.parser.SysYParser;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**

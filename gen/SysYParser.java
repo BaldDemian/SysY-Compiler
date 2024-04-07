@@ -1,4 +1,4 @@
-package compiler.gen.parser;
+
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -16,23 +16,23 @@ public class SysYParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		CONST=1, INT=2, VOID=3, IF=4, ELSE=5, WHILE=6, BREAK=7, CONTINUE=8, RETURN=9,
-		PLUS=10, MINUS=11, MUL=12, DIV=13, MOD=14, ASSIGN=15, EQ=16, NEQ=17, LT=18,
-		GT=19, LE=20, GE=21, NOT=22, AND=23, OR=24, L_PAREN=25, R_PAREN=26, L_BRACE=27,
-		R_BRACE=28, L_BRACKT=29, R_BRACKT=30, COMMA=31, SEMICOLON=32, IDENT=33,
+		CONST=1, INT=2, VOID=3, IF=4, ELSE=5, WHILE=6, BREAK=7, CONTINUE=8, RETURN=9, 
+		PLUS=10, MINUS=11, MUL=12, DIV=13, MOD=14, ASSIGN=15, EQ=16, NEQ=17, LT=18, 
+		GT=19, LE=20, GE=21, NOT=22, AND=23, OR=24, L_PAREN=25, R_PAREN=26, L_BRACE=27, 
+		R_BRACE=28, L_BRACKT=29, R_BRACKT=30, COMMA=31, SEMICOLON=32, IDENT=33, 
 		INTEGER_CONST=34, WS=35, LINE_COMMENT=36, MULTILINE_COMMENT=37;
 	public static final int
-		RULE_program = 0, RULE_compUnit = 1, RULE_decl = 2, RULE_constDecl = 3,
-		RULE_bType = 4, RULE_constDef = 5, RULE_constInitVal = 6, RULE_varDecl = 7,
-		RULE_varDef = 8, RULE_initVal = 9, RULE_funcDef = 10, RULE_funcType = 11,
-		RULE_funcFParams = 12, RULE_funcFParam = 13, RULE_block = 14, RULE_blockItem = 15,
-		RULE_stmt = 16, RULE_exp = 17, RULE_cond = 18, RULE_lVal = 19, RULE_number = 20,
+		RULE_program = 0, RULE_compUnit = 1, RULE_decl = 2, RULE_constDecl = 3, 
+		RULE_bType = 4, RULE_constDef = 5, RULE_constInitVal = 6, RULE_varDecl = 7, 
+		RULE_varDef = 8, RULE_initVal = 9, RULE_funcDef = 10, RULE_funcType = 11, 
+		RULE_funcFParams = 12, RULE_funcFParam = 13, RULE_block = 14, RULE_blockItem = 15, 
+		RULE_stmt = 16, RULE_exp = 17, RULE_cond = 18, RULE_lVal = 19, RULE_number = 20, 
 		RULE_unaryOp = 21, RULE_funcRParams = 22, RULE_param = 23, RULE_constExp = 24;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"program", "compUnit", "decl", "constDecl", "bType", "constDef", "constInitVal",
-			"varDecl", "varDef", "initVal", "funcDef", "funcType", "funcFParams",
-			"funcFParam", "block", "blockItem", "stmt", "exp", "cond", "lVal", "number",
+			"program", "compUnit", "decl", "constDecl", "bType", "constDef", "constInitVal", 
+			"varDecl", "varDef", "initVal", "funcDef", "funcType", "funcFParams", 
+			"funcFParam", "block", "blockItem", "stmt", "exp", "cond", "lVal", "number", 
 			"unaryOp", "funcRParams", "param", "constExp"
 		};
 	}
@@ -40,19 +40,19 @@ public class SysYParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'const'", "'int'", "'void'", "'if'", "'else'", "'while'", "'break'",
-			"'continue'", "'return'", "'+'", "'-'", "'*'", "'/'", "'%'", "'='", "'=='",
-			"'!='", "'<'", "'>'", "'<='", "'>='", "'!'", "'&&'", "'||'", "'('", "')'",
+			null, "'const'", "'int'", "'void'", "'if'", "'else'", "'while'", "'break'", 
+			"'continue'", "'return'", "'+'", "'-'", "'*'", "'/'", "'%'", "'='", "'=='", 
+			"'!='", "'<'", "'>'", "'<='", "'>='", "'!'", "'&&'", "'||'", "'('", "')'", 
 			"'{'", "'}'", "'['", "']'", "','", "';'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "CONST", "INT", "VOID", "IF", "ELSE", "WHILE", "BREAK", "CONTINUE",
-			"RETURN", "PLUS", "MINUS", "MUL", "DIV", "MOD", "ASSIGN", "EQ", "NEQ",
-			"LT", "GT", "LE", "GE", "NOT", "AND", "OR", "L_PAREN", "R_PAREN", "L_BRACE",
-			"R_BRACE", "L_BRACKT", "R_BRACKT", "COMMA", "SEMICOLON", "IDENT", "INTEGER_CONST",
+			null, "CONST", "INT", "VOID", "IF", "ELSE", "WHILE", "BREAK", "CONTINUE", 
+			"RETURN", "PLUS", "MINUS", "MUL", "DIV", "MOD", "ASSIGN", "EQ", "NEQ", 
+			"LT", "GT", "LE", "GE", "NOT", "AND", "OR", "L_PAREN", "R_PAREN", "L_BRACE", 
+			"R_BRACE", "L_BRACKT", "R_BRACKT", "COMMA", "SEMICOLON", "IDENT", "INTEGER_CONST", 
 			"WS", "LINE_COMMENT", "MULTILINE_COMMENT"
 		};
 	}
@@ -193,7 +193,7 @@ public class SysYParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(54);
+			setState(54); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
@@ -215,7 +215,7 @@ public class SysYParser extends Parser {
 					break;
 				}
 				}
-				setState(56);
+				setState(56); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & 14L) != 0) );
@@ -1345,7 +1345,7 @@ public class SysYParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_stmt; }
-
+	 
 		public StmtContext() { }
 		public void copyFrom(StmtContext ctx) {
 			super.copyFrom(ctx);
@@ -1685,7 +1685,7 @@ public class SysYParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exp; }
-
+	 
 		public ExpContext() { }
 		public void copyFrom(ExpContext ctx) {
 			super.copyFrom(ctx);
@@ -1990,7 +1990,7 @@ public class SysYParser extends Parser {
 						}
 						break;
 					}
-					}
+					} 
 				}
 				setState(267);
 				_errHandler.sync(this);
@@ -2144,7 +2144,7 @@ public class SysYParser extends Parser {
 						}
 						break;
 					}
-					}
+					} 
 				}
 				setState(287);
 				_errHandler.sync(this);
@@ -2222,7 +2222,7 @@ public class SysYParser extends Parser {
 					setState(291);
 					match(R_BRACKT);
 					}
-					}
+					} 
 				}
 				setState(297);
 				_errHandler.sync(this);

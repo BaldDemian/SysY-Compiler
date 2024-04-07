@@ -1,7 +1,4 @@
-package compiler.gen.parser;
 
-import compiler.gen.parser.SysYParser;
-import compiler.gen.parser.SysYParserVisitor;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
