@@ -27,6 +27,7 @@ public class Main {
         CharStream input = CharStreams.fromFileName(source);
         SysYLexer lexer = new SysYLexer(input);
         // 进行词法错误检查
+        /* 下方代码若不注释掉，将影响语法分析
         lexer.removeErrorListeners();
         LexerErrorListener lexerErrorListener = new LexerErrorListener();
         lexer.addErrorListener(lexerErrorListener);
@@ -34,6 +35,7 @@ public class Main {
         if (lexerErrorListener.hasLexError()) {
             return; // 存在词法错误，退出程序
         }
+        */
         lexer.removeErrorListeners();
         // 获取词素流并提供给语法分析器
         CommonTokenStream tokens = new CommonTokenStream(lexer);
